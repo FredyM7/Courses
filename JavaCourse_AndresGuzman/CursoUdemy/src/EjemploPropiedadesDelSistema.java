@@ -1,0 +1,29 @@
+import java.util.Properties;
+
+public class EjemploPropiedadesDelSistema {
+    public static void main(String[] args) {
+
+        String username = System.getProperty("user.name");
+        System.out.println("username = " + username);
+
+        String home = System.getProperty("user.home");
+        System.out.println("home = " + home);
+
+        String workSpace = System.getProperty("user.dir");
+        System.out.println("workSpace = " + workSpace);
+
+        String javaVersion = System.getProperty("java.version");
+        System.out.println("javaVersion = " + javaVersion);
+
+        //Dos formas de llamar un lineSeparator(salto de línea)
+        String lineSeparator = System.getProperty("line.separator");
+        String lineSeparator2 = System.lineSeparator();
+        System.out.println("lineSeparator: " + lineSeparator + "Una línea nueva . . .");
+
+
+        Properties p = System.getProperties();
+        p.list(System.out);
+
+
+    }
+}
